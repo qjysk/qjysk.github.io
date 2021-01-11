@@ -1,0 +1,81 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>曲家营水库水位监测</title>
+<link rel="stylesheet" type="text/css" href="Assets/css/reset.css"/>
+<script type="text/javascript" src="Assets/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Assets/plugins/FlexSlider/flexslider.css">
+<script type="text/javascript" src="Assets/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="Assets/css/thems.css">
+<script type="text/javascript" src="Assets/js/q_func.js"></script>
+<script language="javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+	animation: "slide"
+  });
+});
+</script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+	<div class="head_m clearfix">
+        <div class="logo"><a href=""><img src="Assets/images/logo.jpg" alt="XXX"/></a></div>
+    </div>
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner">
+	<div id="inner">
+        <div class="hot-event">
+        	<div class="event-item" style="display: block;">
+                    <img src="Assets/upload/banner.jpg" class="photo" alt="XXX" />
+                    <div class="des">
+                        <div id="box1">
+                            <h3>实际径流的降水量和水库来水量</h3><br/>
+                            <div class="pls_input">请输入预测降水量：
+                                <input type="text" id="R" v-model:value="RValue"  placeholder="单位：毫米"/>
+                            </div>
+                            <div class="pls_input">请输入前期无雨天数：
+                                <input type="text" id="D" v-model:value="DValue"  placeholder="单位：日"/>
+                                <button  dir="rtlRR" onclick="QFunction()">计算</button>
+                                <div style="font-size:12px;display: inline;">上次过程为累计降水量大于25mm的过程</div>
+                            </div>                                                    
+                            <div class="pls_input">实际产生径流的降水量为：<span id="RR" class="out_k"> </span> 毫米</div>   
+	                        <div class="pls_input">水库来水量预测为：<span id="Q" class="out_k"> </span> 万立方米</div>	
+                        </div><br/><br/>
+                        <hr class="hr0"/>
+                        <div id="box2">
+                            <h3>计算预测库容和预测水位</h3><br/>
+                            <div class="pls_input">请输入原库容：<input type="text" id="V1" v-model:value="V1Value" placeholder="单位：万立方米"/>
+                                <button  dir="rtlV2" onclick="HFunction()">计算</button>
+                            </div>
+                            <div class="pls_input">预计库容增长为：<span id="V2" class="out_k"> </span> 万立方米</div>
+                            <div class="pls_input">预计水位增长为：<span id="H" class="out_k"> </span> 米</div> 
+                        </div><br/><br/>
+                        <hr class="hr0"/>
+                        <div>
+                            <h3>友情链接</h3>
+                            <div style="text-align: center;">
+                            <a class="friends" href="http://smartweather.bjzkzm.com/zbaishan" target="_blank" rel="nofollow"> &emsp;白山市智慧气象平台&emsp;|</a>
+                            <a class="friends" href="http://www.nmc.cn/publish/radar/ji-lin/bai-shan.htm" target="_blank" rel="nofollow"> &emsp;白山市天气雷达 &emsp;|</a>
+                            <a class="friends" href="http://rsapp.nsmc.org.cn/geofy/" target="_blank" rel="nofollow"> &emsp;风云四号卫星云图 &emsp;</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>   
+        </div>
+    </div>
+</div>
+
+
+<div class="space_hx">&nbsp;</div>
+<div class="foot_bg">
+	<div class="foot">
+    	白山市气象局版权所有 Copyright(C)2021
+    </div>
+</div>
+</body>
+</html>
